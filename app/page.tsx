@@ -19,7 +19,10 @@ export default function Home() {
           assignment. The theme is entirely custom-made without using any component framework. I
           have utilized the react to make reusable components. You can find the code on{' '}
           <span>
-            <a className="text-foreground cursor-pointer underline transition-all hover:underline-offset-2">
+            <a
+              href="https://github.com/pkrinesh/inxtest-assignment"
+              className="text-foreground cursor-pointer underline transition-all hover:underline-offset-2"
+            >
               Github
             </a>
           </span>
