@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --b1: 44 47% 86%;
+    --b2: 45 47% 80%;
+    --b3: 44 47% 73%;
+    --bn: 340 7% 17%;
+    --bnc: 43 41% 88%;
+    --bc: 345 5% 15%;
+    --p: var(--bn);
+    --pc: var(--bnc);
+    --s: 145 27% 72%;
+    --sc: var(--bc);
+    --a: 24 67% 59%;
+    --ac: var(--bc);
+    --e: 3.33 87% 62%;
+    --ec: var(--bc);
+  }
+
+  .dark {
+    --b1: 306 19% 11%;
+    --b2: 306 19% 9%;
+    --b3: 306 21% 8%;
+    --bn: 300 20% 6%;
+    --bnc: 301.36 2% 79%;
+    --bc: 37.43 47% 56.99%;
+    --p: var(--bn);
+    --pc: var(--bnc);
+    --s: 182.4 25% 20%;
+    --sc: 181.75 6% 83%;
+    --a: 194.19 74% 25%;
+    --ac: 197.58 22% 85%;
+    --e: 9.76 95% 75%;
+    --ec: 8.12 57.99% 5%;
+  }
+
+  :root {
+    --background: var(--b1);
+    --foreground: var(--bc);
+
+    --card: var(--b2);
+    --card-foreground: var(--bc);
+
+    --popover: var(--b3);
+    --popover-foreground: var(--bc);
+
+    --primary: var(--p);
+    --primary-foreground: var(--pc);
+
+    --secondary: var(--s);
+    --secondary-foreground: var(--sc);
+
+    --muted: var(--b3);
+    --muted-foreground: var(--bc);
+
+    --accent: var(--a);
+    --accent-foreground: var(--ac);
+
+    --destructive: var(--e);
+    --destructive-foreground: var(--ec);
+
+    --border: var(--b3);
+    --input: var(--b3);
+    --ring: var(--b3);
+
+    --radius: 0.5rem;
+  }
+}
