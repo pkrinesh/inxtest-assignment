@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import CurrencyDataTable from '@/components/data-table'
+import CurrencyDataTable from './data-table'
 
 export const metadata: Metadata = {
   title: 'Data table',
