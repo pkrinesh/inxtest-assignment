@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function Center() {
   return (
-    <main className="flex bg-secondary flex-col min-h-screen justify-center items-center">
+    <main className="flex bg-secondary flex-col h-full justify-center items-center">
       <h1 className="text-center text-secondary-foreground text-2xl sm:text-4xl font-mono font-bold">
         The Div is Centered.
       </h1>

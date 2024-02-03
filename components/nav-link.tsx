@@ -22,7 +22,7 @@ export function TheNav() {
       onMouseEnter={() => setIsHidden(false)}
       onMouseLeave={() => setIsHidden(true)}
       className={clsx(
-        'absolute bottom-0 w-full py-6 transition-all',
+        'fixed bottom-0 z-10 w-full py-6 transition-all',
         isHidden ? 'md:bottom-[-52px]' : 'bottom-0'
       )}
     >
