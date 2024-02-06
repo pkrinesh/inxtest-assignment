@@ -1,0 +1,43 @@
+.table-container {
+  position: relative;
+  width: 100%;
+  overflow: auto;
+}
+
+.table {
+  width: 100%;
+  caption-side: bottom;
+  font-size: var(--text-sm);
+  line-height: var(--leading-sm);
+}
+
+.table__head {
+  height: var(--12);
+  padding: 0 var(--4);
+  text-align: left;
+  vertical-align: middle;
+  font-weight: 500;
+  color: var(--muted-foreground);
+}
+
+.table__row {
+  border-bottom: 1px var(--border) solid;
+  transition: color 300ms;
+}
+
+.table__row:hover {
+  background-color: hsl(var(--b3) / 0.5);
+}
+
+.table__data {
+  padding: var(--4);
+  color: var(--accent-foreground);
+  vertical-align: middle;
+}
+
+.table__caption {
+  margin: var(--4) 0 0 0;
+  font-size: var(--text-sm);
+  line-height: var(--leading-sm);
+  color: var(--muted-foreground);
+}

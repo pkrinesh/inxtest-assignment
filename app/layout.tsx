@@ -20,9 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+        <ThemeProvider>
           <TheNav />
-          <div className="h-full">{children}</div>
+          <main>{children}</main>
         </ThemeProvider>
       </body>
     </html>
