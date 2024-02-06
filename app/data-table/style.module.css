@@ -1,0 +1,69 @@
+.page {
+  height: 100%;
+  padding: var(--2);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  height: 35rem;
+  max-width: 32rem;
+  margin: var(--2) 0 0 0;
+}
+
+@media (min-width: 768px) {
+  .page {
+    justify-content: center;
+  }
+  .container {
+    margin: 0;
+  }
+}
+
+.title {
+  font-size: var(--text-2xl);
+  line-height: var(--leading-2xl);
+  font-weight: 500;
+  color: var(--foreground);
+  align-self: flex-start;
+}
+
+.search-box {
+  background-color: hsl(var(--b3) / 0.2);
+  color: var(--card-foreground);
+  border: 1px var(--border) solid;
+  padding: var(--2) var(--4);
+  width: 100%;
+  border-radius: var(--rounded-lg);
+}
+
+.filter-button {
+  display: flex;
+  gap: var(--1);
+  justify-content: center;
+  align-items: center;
+  padding: var(--2) var(--4);
+  border-radius: var(--rounded-md);
+
+  margin-left: -1.5rem;
+}
+.filter-button:hover {
+  background-color: var(--muted); /* Replace with your actual muted color */
+}
+
+.arrow-up-down {
+  margin: 0 0 0 var(--2);
+  height: var(--4);
+  width: var(--4);
+}
+
+.table-cell__date {
+  font-weight: 500;
+}
+
+.table-cell__rate {
+  text-align: right;
+}

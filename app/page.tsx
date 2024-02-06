@@ -1,26 +1,72 @@
 import { Badge } from '@/components/badge'
 import Link from 'next/link'
+import styles from './page-style.module.css'
 
 export default function Home() {
   return (
-    <main className="flex bg-background flex-col min-h-screen items-center">
-      <section className="flex flex-1 flex-col gap-4 justify-start p-4 items-start w-full md:w-auto md:justify-center">
-        <h1 className="text-foreground text-4xl font-mono font-bold">Krinesh Patel</h1>
-        <p className="font-mono text-secondary-foreground text-xl font-medium">
-          Full Stack Developer
-        </p>
-        <p className="max-w-xl text-pretty font-mono text-secondary-foreground/80">
+<<<<<<< HEAD
+    <main className="relative bg-background h-full overflow-hidden overflow-y-auto">
+      <div className="flex h-full flex-col items-center">
+        <section className="flex flex-1 flex-col gap-4 justify-start p-4 items-start w-full md:w-auto md:justify-center">
+          <h1 className="text-foreground text-4xl font-mono font-bold">Krinesh Patel</h1>
+          <p className="font-mono text-secondary-foreground text-xl font-medium">
+            Full Stack Developer
+          </p>
+          <p className="max-w-xl text-pretty font-mono text-secondary-foreground/80">
+            I have successfully completed all three{' '}
+            <span className="text-foreground cursor-pointer underline transition-all hover:underline-offset-2">
+              <Link href="https://inxtest.netlify.app/" target="_blank">
+                assignments
+              </Link>
+            </span>{' '}
+            with fully responsive design. I took the liberty to introduce a custom dark and light
+            mode inspired by Daisy UI. Additionally, I added a floating navbar that hides on mouse
+            leave and is initially hidden for the{' '}
+            <span className="text-foreground cursor-pointer underline transition-all hover:underline-offset-2">
+              <Link href="/center-div">Center the Div</Link>
+            </span>{' '}
+            assignment. The theme is entirely custom-made without using any component framework. I
+            have utilized the react to make reusable components. You can find the code on{' '}
+            <span>
+              <a
+                href="https://github.com/pkrinesh/inxtest-assignment"
+                target="_blank"
+                className="text-foreground cursor-pointer underline transition-all hover:underline-offset-2"
+              >
+                Github
+              </a>
+            </span>
+            .
+          </p>
+          <div>
+            <div className="flex gap-2 mt-2">
+              {['React', 'Next.js', 'Typescript', 'Css'].map((item) => {
+                return <Badge key={item}>{item}</Badge>
+              })}
+            </div>
+=======
+    <div className={styles['page']}>
+      <section className={styles['section']}>
+        <h1 className={styles['title']}>Krinesh Patel</h1>
+        <h3 className={styles['heading']}>Full Stack Developer</h3>
+        <p className={styles['description']}>
           I have successfully completed all three{' '}
-          <span className="text-foreground cursor-pointer underline transition-all hover:underline-offset-2">
-            <Link href="https://inxtest.netlify.app/" target="_blank">
+          <span>
+            <Link
+              className={styles['description__link']}
+              href="https://inxtest.netlify.app/"
+              target="_blank"
+            >
               assignments
             </Link>
           </span>{' '}
           with fully responsive design. I took the liberty to introduce a custom dark and light mode
           inspired by Daisy UI. Additionally, I added a floating navbar that hides on mouse leave
           and is initially hidden for the{' '}
-          <span className="text-foreground cursor-pointer underline transition-all hover:underline-offset-2">
-            <Link href="/center-div">Center the Div</Link>
+          <span>
+            <Link className={styles['description__link']} href="/center-div">
+              Center the Div
+            </Link>
           </span>{' '}
           assignment. The theme is entirely custom-made without using any component framework. I
           have utilized the react to make reusable components. You can find the code on{' '}
@@ -28,7 +74,7 @@ export default function Home() {
             <a
               href="https://github.com/pkrinesh/inxtest-assignment"
               target="_blank"
-              className="text-foreground cursor-pointer underline transition-all hover:underline-offset-2"
+              className={styles['description__link']}
             >
               Github
             </a>
@@ -36,13 +82,14 @@ export default function Home() {
           .
         </p>
         <div>
-          <div className="flex gap-2 mt-2">
+          <div className={styles['badge-container']}>
             {['React', 'Next.js', 'Typescript', 'Tailwindcss'].map((item) => {
               return <Badge key={item}>{item}</Badge>
             })}
+>>>>>>> de7ce46adcf7ba5f1b335038ca9a305ef7750805
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

@@ -11,6 +11,7 @@ import {
   TableRow,
 } from '@/components/table'
 import { ArrowUpDown } from 'lucide-react'
+import styles from './style.module.css'
 
 const data = [
   {
@@ -69,7 +70,7 @@ const data = [
   },
 ]
 
-export default function CurrencyDataTable({ className }: { className: string }) {
+export default function CurrencyDataTable(props: React.ComponentProps<'div'>) {
   const [isSorted, setIsSorted] = React.useState(false)
   const [_, setSearch] = React.useState('')
   const [filteredData, setFilteredData] = React.useState(data)
@@ -98,9 +99,9 @@ export default function CurrencyDataTable({ className }: { className: string }) 
   }
 
   return (
-    <div className={className}>
+    <div {...props}>
       <input
-        className="bg-card/20 text-card-foreground border border-border px-4 py-2 w-full max-w-sm rounded-lg focus:border-border"
+        className={styles['search-box']}
         placeholder="Filter Currency"
         onChange={handleSearch}
       />
@@ -110,23 +111,22 @@ export default function CurrencyDataTable({ className }: { className: string }) 
           <TableRow>
             <TableHead>Date</TableHead>
             <TableHead>
-              <button
-                className="flex gap-1 justify-center items-center px-4 py-2 rounded hover:bg-muted -ml-6"
-                onClick={handleSorting}
-              >
+              <button className={styles['filter-button']} onClick={handleSorting}>
                 Currency
-                <ArrowUpDown className="ml-2 h-4 w-4" />
+                <ArrowUpDown className={styles['arrow-up-down']} />
               </button>
             </TableHead>
-            <TableHead className="text-right">Rate</TableHead>
+            <TableHead style={{ textAlign: 'right' }}>Rate</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           {filteredData.map((item) => (
             <TableRow key={item.recordid}>
-              <TableCell className="font-medium">{item.fields.date}</TableCell>
+              <TableCell className={styles['table-cell__date']}>{item.fields.date}</TableCell>
               <TableCell>{item.fields.currency}</TableCell>
-              <TableCell className="text-right">{item.fields.rate.toFixed(3)}</TableCell>
+              <TableCell className={styles['table-cell__rate']}>
+                {item.fields.rate.toFixed(3)}
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>

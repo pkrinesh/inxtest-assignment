@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import styles from './style.module.css'
 
 export const metadata: Metadata = {
   title: 'Center the Div',
@@ -7,10 +8,8 @@ export const metadata: Metadata = {
 
 export default function Center() {
   return (
-    <main className="flex bg-secondary flex-col min-h-screen justify-center items-center">
-      <h1 className="text-center text-secondary-foreground text-2xl sm:text-4xl font-mono font-bold">
-        The Div is Centered.
-      </h1>
-    </main>
+    <div className={styles['page']}>
+      <h1 className={styles['center']}>The Div is Centered.</h1>
+    </div>
   )
 }

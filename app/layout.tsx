@@ -20,11 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
-          <div className="relative min-h-screen overflow-hidden">
-            <TheNav />
-            {children}
-          </div>
+        <ThemeProvider>
+          <TheNav />
+          <main>{children}</main>
         </ThemeProvider>
       </body>
     </html>
