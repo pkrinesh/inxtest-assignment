@@ -13,7 +13,6 @@ export function TheNav() {
     <nav
       onMouseEnter={() => setIsHidden(false)}
       onMouseLeave={async () => {
-        await new Promise((resolve) => setTimeout(resolve, 1000))
         setIsHidden(true)
       }}
       data-hidden={isHidden ? isHidden : undefined}
