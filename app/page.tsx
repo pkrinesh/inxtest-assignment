@@ -1,7 +1,6 @@
 import { Badge } from '@/components/badge'
 import Link from 'next/link'
 import styles from './page-style.module.css'
-import styles from './page-style.module.css'
 
 export default function Home() {
   return (
@@ -43,7 +42,7 @@ export default function Home() {
         </p>
         <div>
           <div className={styles['badge-container']}>
-            {['React', 'Next.js', 'Typescript', 'Tailwindcss'].map((item) => {
+            {['React', 'Next.js', 'Typescript', 'Css'].map((item) => {
               return <Badge key={item}>{item}</Badge>
             })}
           </div>
